@@ -1,0 +1,8 @@
+<h2>Authenticated successfully</h2>
+
+<p>
+  Rapid Connect sent a valid JWS, which we decoded as expected.
+  Here is the information we received:
+</p>
+
+<pre><code><%= JSON.pretty_generate(@jwt.as_json) %></code></pre>
