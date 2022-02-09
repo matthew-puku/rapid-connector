@@ -1,0 +1,2 @@
+module RapidConnectionsHelper
+end

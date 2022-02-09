@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rapid_connection %>
+
+<div>
+  <%= link_to "Edit this rapid connection", edit_rapid_connection_path(@rapid_connection) %> |
+  <%= link_to "Back to rapid connections", rapid_connections_path %>
+
+  <%= button_to "Destroy this rapid connection", @rapid_connection, method: :delete %>
+</div>
