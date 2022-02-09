@@ -1,7 +1,14 @@
 <div id="<%= dom_id rapid_connection %>">
+  <h2><%= rapid_connection.nickname %></h2>
+
   <p>
-    <strong>Nickname:</strong>
-    <%= rapid_connection.nickname %>
+    <strong>URL for Rapid Connect:</strong>
+    <%= rapid_connection_url(rapid_connection) %>
+  </p>
+
+  <p>
+    <strong>Callback URL for Rapid Connect:</strong>
+    <%= rapid_connection_sessions_url(rapid_connection) %>
   </p>
 
   <p>
@@ -9,9 +16,13 @@
     <%= rapid_connection.secret %>
   </p>
 
-  <p>
-    <strong>Callback url:</strong>
-    <%= rapid_connection.callback_url %>
-  </p>
+  <hr/>
 
+  <p>
+    <% if rapid_connection.connected? %>
+      <%= link_to 'Authenticate with Rapid Connect', rapid_connection.callback_url %>
+    <% else %>
+      Add the callback URL from Rapid Connect to enable authentication.
+    <% end %>
+  </p>
 </div>
