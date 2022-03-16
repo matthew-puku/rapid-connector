@@ -5,7 +5,7 @@ class RapidConnectionsController < ApplicationController
 
   # GET /rapid_connections or /rapid_connections.json
   def index
-    @rapid_connections = RapidConnection.all
+    @rapid_connections = RapidConnection.order(:created_at)
   end
 
   # GET /rapid_connections/1 or /rapid_connections/1.json
