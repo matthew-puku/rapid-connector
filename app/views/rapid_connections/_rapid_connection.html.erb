@@ -25,4 +25,10 @@
       Add the callback URL from Rapid Connect to enable authentication.
     <% end %>
   </p>
+
+  <% if rapid_connection.connected? && rapid_connection.preferred_entity_id? %>
+    <p>
+      <%= link_to 'Authenticate and skip discovery', rapid_connection.direct_auth_url %>
+    </p>
+  <% end %>
 </div>

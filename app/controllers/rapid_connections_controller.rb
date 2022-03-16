@@ -70,6 +70,6 @@ class RapidConnectionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def rapid_connection_params
-    params.require(:rapid_connection).permit(:nickname, :secret, :callback_url)
+    params.require(:rapid_connection).permit(:nickname, :secret, :callback_url, :preferred_entity_id)
   end
 end

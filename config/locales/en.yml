@@ -34,3 +34,4 @@ en:
     label:
       rapid_connection:
         callback_url: "Callback URL from Rapid Connect"
+        preferred_entity_id: "Entity ID used when skipping discovery"
