@@ -6,3 +6,8 @@
 </p>
 
 <pre><code><%= JSON.pretty_generate(@jwt.as_json) %></code></pre>
+
+<p>
+  <%= link_to 'Authenticate again', @connection.direct_auth_url || @connection.callback_url %>
+  | <%= link_to 'Back', rapid_connection_path(@connection) %>
+</p>

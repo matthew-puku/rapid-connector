@@ -10,6 +10,8 @@ class RapidConnection < ApplicationRecord
   end
 
   def direct_auth_url
+    return nil if preferred_entity_id.blank?
+
     URI.parse(callback_url).tap do |uri|
       uri.query = { entityID: preferred_entity_id }.to_query
     end.to_s
